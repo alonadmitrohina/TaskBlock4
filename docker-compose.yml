@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  mongo:
+    image: mongo:8.0.4
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/data/mongo/db:/data/db
+    networks:
+      - default
+    healthcheck:
+      test: [ "CMD", "mongosh", "--eval", "db.runCommand('ping').ok" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongo-data:
