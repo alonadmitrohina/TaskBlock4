@@ -1,4 +1,5 @@
 #Awards Service (Node.js + TypeScript + MongoDB)
+
 ##Опис
 
 Цей сервіс реалізує REST API для роботи з об’єктами Awards, які прив’язані до сутності Song (багато-до-одного відношення).
